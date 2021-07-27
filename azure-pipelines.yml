@@ -22,7 +22,7 @@ steps:
   displayName: 'Run tests on'
   continueOnError: true
 
-- script: npm run cy:run:chroome
+- script: npm run cy:run:chrome
   displayName: 'Run tests on'
   continueOnError: true
 
