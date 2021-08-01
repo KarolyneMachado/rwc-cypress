@@ -1,5 +1,5 @@
 export const ELEMENTS ={
-    linkNovaPublicacao: 'a[href*=editor]',
+    linkNovaPublicacao: 'a[ui-sref="app.editor"]',
     inputTitle: 'input[placeholder="Article Title',
     inputAbout: 'input[ng-model*=desc]',
     inputWriteArticle: '[placeholder*=Write]',

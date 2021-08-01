@@ -24,20 +24,21 @@ Cypress.Commands.add('backgroundLogin', () => {
             method: 'POST',
             url: `${Cypress.config().apiUrl}users/login`,
             body: {
-            user:{
+               user:{
                 email: 'agilizei@yahoo.com',
                 password: '123456789'
             }    
-            }
-        }).then((loginResponse) =>{
-         console.log(loginResponse.body)   
-         cy.log(loginResponse.body.user.token)
-         cy.visit('/',{
+        }
+    }).then((loginResponse) =>{
+        console.log(loginResponse.body)   
+        cy.log(loginResponse.body.user.token)
+        
+        cy.visit('/',{
             onBeforeLoad: (win) =>{
-                win.localStorage.setItem('jwtToken', loginResponse.body.user.token)
+               win.localStorage.setItem('jwtToken', loginResponse.body.user.token)
             }
-            });
-            });
+        });
+    });
 })
 
 import Routes from './routes'
