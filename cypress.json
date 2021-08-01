@@ -5,6 +5,9 @@
     "user":{
         "email":"agilizei@yahoo.com",
         "password":"123456789"
+    },
+    "reporter": "junit",
+    "reporterOptions": {
+        "mochafile": "cypress/reports/junit-[hash].xml"
     }
-
 }
